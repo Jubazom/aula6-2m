@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controles</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      div {
+        max-width: 700px;
+        margin: auto;
+      }
+      form > * {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px;
+      }
+
+      label,
+      fieldset {
+        margin-top: 10px;
+      }
+
+      input[type="image"],
+      input[type="submit"],
+      input[type="reset"],
+      input[type="button"] {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      input[type="image"]{
+        width: 200px;
+      }
+
+      button {
+        margin-top: 20px;
+        margin-bottom:50px;
+      }
+
+      fieldset {
+        border: 1px solid;
+      }
+      datalist{
+        display: none;
+      }
+
+      meter,
+      progress,
+      input[type="color"], 
+      input[type="range"] {
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Controles de formulário</h1>
+      <form id="questionario" method="post" action="">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" multiple>
+        <label for="website">Website</label>
+        <input type="url" id="website" name="website">
+        <label for="number">Número</label>
+        <input type="number" name="number" id="number" step="any">
+        <label for="birthday">Nascimento</label>
+        <input type="date" name="birthday" id="birthday" min="2000-01-01" max="2020-12-31">
+        <label for="time">Hora</label>
+        <input type="time" name="time" id="time" step="1800">
+        <label for="phone">Telefone</label>
+        <input type="tel" name="phone" id="phone">
+        <fieldset>
+          <legend>Selecione uma ou mais cores:</legend>
+          <input type="checkbox" name="favcolor" value="blue" id="blue"><label for="blue">Azul</label><br>
+          <input type="checkbox" name="favcolor" value="red" id="red" checked><label for="red">Vermelha</label><br>
+          <input type="checkbox" name="favcolor" value="green" id="green"><label for="green">Verde</label><br>
+        </fieldset>
+        <fieldset>
+          <legend>Qual é a sua refeição favorita?</legend>
+          <input type="radio" id="soup" name="meal" value="soup" checked>
+          <label for="soup">Sopa</label><br>
+          <input type="radio" id="curry" name="meal" value="curry">
+          <label for="curry">Carne</label><br>
+          <input type="radio" id="pizza" name="meal" value="pizza">
+          <label for="pizza">Pizza</label><br>
+        </fieldset>
+        <label for="fuel">Nível de combustível (meter)</label>
+        <meter id="fuel"
+              min="0" max="100"
+              low="33" high="66" optimum="80"
+              value="90">
+        </meter>
+        <label for="file">Barra de progresso (progress)</label>
+        <progress id="file" max="100" value="30"> 30% </progress>
+        <label for="pizza">Qual sua pizza favorita? (select)</label>
+        <select name="pizza" id="pizza">
+          <optgroup label="Vegetais">
+            <option value="cogumelos">Cogumelos</option>
+            <option value="cebolas">Cebolas</option>
+          </optgroup>
+          <optgroup label="Carnes">
+            <option value="calabresa">Calabresa</option>
+            <option value="bacon">Bacon</option>
+          </optgroup>
+        </select>
+        <label for="pizza2">Qual sua pizza favorita? (select multiple)</label>
+        <select name="pizza2" id="pizza2" multiple>
+          <optgroup label="Vegetais">
+            <option value="cogumelos">Cogumelos</option>
+            <option value="cebolas">Cebolas</option>
+          </optgroup>
+          <optgroup label="Carnes">
+            <option value="calabresa">Calabresa</option>
+            <option value="bacon">Bacon</option>
+          </optgroup>
+        </select>
+        <label for="ice-cream-choice">Escolha um sabor (datalist):</label>
+        <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+        <datalist id="ice-cream-flavors">
+          <option value="Chocolate">
+          <option value="Coco">
+          <option value="Hortelã">
+          <option value="Morango">
+          <option value="Baunilha">
+        </datalist>
+        <label for="poem">Escreva um poema</label>
+        <textarea id="poem" rows="10" name="poem"></textarea>
+        <label for="color">Selecione uma cor</label>
+        <input type="color" name="color" id="color">
+        <label for="resume">Carregar arquivo</label>
+        <input type="file" name="resume" id="resume" accept="image/*,.doc,.docx,.pdf">
+        <label for="password">Senha</label>
+        <input type="password" name="password" id="password">
+        <input type="range" min="1" max="10" step="1">
+        <label for="search">Busca</label>
+        <input type="search" name="search" id="search">
+        <input type="reset" value="Limpar">      
+        <input type="button" value="Input Button">
+        <input type="image" alt="Clique-me!" title="clique-me" src="myfood.png">          
+        <input type="submit" value="Input Submit">
+        <button type="submit">Button <strong>Submit</strong></button>
+      </form>
+    </div>
+  </body>
+</html>
+

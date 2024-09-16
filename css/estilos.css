@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    margin: 0px;
+    margin-bottom: 30px;
+}
+main h1{
+    font-family: "Lobster", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 50px;
+    padding-top: 20px;
+}
+header{
+    width: 100%;
+    height: 100px;
+    /* background-color:red; */ 
+}
+nav{
+    text-align: center;
+}
+#nav_esq, #nav_dir{
+    display: inline-block;
+    width: 550px;
+    vertical-align: 100%;
+    /* background-color: rgb(22, 22, 22); */
+}
+#nav_esq a, #nav_dir a{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    color: black;
+    font-weight: 600;
+
+}
+#nav_esq a:hover, #nav_dir a:hover{ 
+     color: brown;
+     background-color: rgb(255, 174, 174);
+}
+.menu_atual{  
+    color: brown;
+    background-color: rgb(255, 174, 174);
+}
+
+#nav_logo{
+
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    background-color: rgb(255, 174, 174);
+    margin-left: 20px;
+    margin-right: 20px;
+    background-image: url(../img/logoNav.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+main{
+    width: 1200px;
+    height: 1100px;
+    background-color: rgb(255, 255, 255);
+    margin-left: auto;
+    margin-right: auto;
+}
+footer{
+    width: 1200px;
+    height: 300px;
+    background-color: rgb(0, 0, 0);
+    margin-left: auto;
+    margin-right: auto;
+}
+#contato_form, #contato_img{
+    width: 45%;
+    height: 400px;
+    border: 2px solid #000000;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+main section{
+    text-align: center;
+}
+#nome, #senha, #op{
+    width: 400px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 120%;
+}
